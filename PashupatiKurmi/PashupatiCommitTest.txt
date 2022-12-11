@@ -1,1 +1,3 @@
-Seems like the commit is working now
+Seems like the commit is working now.
+
+No, It still not letting me to commit to the mai.
