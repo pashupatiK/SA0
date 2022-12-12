@@ -1,0 +1,5 @@
+Install SQL Server
+
+With the help of google, find the links of 2014, 2016, 2017 and 2019 Sql Server Developer edition.
+
+Install sql server 2019  (not 2022) 
