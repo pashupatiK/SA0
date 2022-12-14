@@ -1,0 +1,55 @@
+Install SQL Server
+1.	With the help of google, find the links of 2014, 2016, 2017 and 2019 SQL Server Developer edition.
+All the legacy SQLs can be downloaded from here:
+https://visualstudio.microsoft.com/dev-essentials/
+
+==========>(Additional comments only) Need to login and go into  https://my.visualstudio.com/Downloads/Featured?mkt=en-us
+SqlServerLinks.docx
+
+2.	Install SQL server 2019 (not 2022) 
+Screenshot is posted in SqlServerLinks.docx
+
+
+Write notes about the topics:
+1.	Difference between Basic Installation and Custom Installation
+•	Basic installation installs only basic features with standard settings.
+o	=======>(Needs explanation) What are those basic features? 
+•	Custom installation allows us to choose what features to install. It also allows us to choose settings and other configurations. 
+o	=======>(Needs explanation) Need to name those custom features and explain what those features are for
+
+
+2.	What is “zeroing out a new space” mean? What does Instant File Initialization (or INI) mean?
+Zeroing means the operation system will do low level formatting writing zeros on the storage that it wants to allocate to the database files. 
+When SQL Server wants to allocate space for database operations like creating/restoring a database or data files, it fills the needed space with zeros. 
+Instant file initialization (IFI) is a setting that allows SQL Server to skip the zero-writing step on that space that it wants to use for database files. There is a check mark during SQL server installation where we can decide whether we want this IFI or not. We can also change this permission if when we want. 
+	=======>(additional comments only) Good to the point answer. Interviewer should be satisfied with your knowledge here. 
+	
+	
+3.	Windows Authentication vs Mixed Mode Authentication
+Windows Authentication uses windows credentials to access databases. Any client having access or connected to the windows can access the database without having database credentials. Window uses certificate-based security mechanism.
+Mixed Mode, SQL Authentication Mode, uses a SA account. This mode requires a username and password to authenticated and connect to the SQL server.
+ We can choose this option during server installation and latter if we want, we can change editing windows registry key.
+	======> (addtional comments only) SA account is created during installation, but it is not used randomly. In companies, DBAs create  SQL Authentication Accounts (Username as well as password) separately after installation for some specific purposes required by the applications or application users. DBAs use SA account for themselves for their own database administration purposes. Even sql developers are not usually given SA passwords. 
+	
+	
+4.	What is “trusted connection = true” in connection string?
+When it set to true, SSPI and, yes, it uses the current windows credentials for server authentication. And if set to false or no, *********it requires SA username and password************
+To use ‘trusted connection = true’, the user/windows credentials must be registered to the domain that has SQL server and the users must have necessary permissions.
+    ======> (additional comments only) For *****<text>******* above, you should say, it requires Sql Authentication Credentials (account and password). SA passwords are kept secret. All sql server that has SQL Authentication enabled has  SA account, but the password are kept secret by the DBAs. 
+
+5.	What are NT accounts for SQL Server and SQL Server Agent? 
+Database Engine runs in windows as Window Service (MSSQLSERVER). NT accounts used by that service to connect to the database engine. Similarly, SQL Server Agent runs as Windows service and NT SERVICE\SQLSERVERAGENT uses the account to connect that Agent to the database. 
+	======> (Needs explanation) This needs more explaining. Some DBAs like to have a domain account as service account. Why do you think they want to override what Microsoft has already provided? You have the same question in video assignment as well. Fill this one out more as you can be grilled on this question by the interviewer. 
+
+
+6.	What are the minimum permissions of those two NT Accounts?
+Both the accounts are members of sysadmin fixed server role. They have SID in windows and run as service. Windows can authenticate them as a user. 
+	=======> (additional comments only)Looks Good
+	
+	
+What to commit in GitHub:
+•	Under your name folder, create new folder and name it as Chapter 1. 
+•	Post screenshots of the links in a word document. Name it as SqlServerLinks.docx and save it inside Chapter 1.
+•	Post the screenshot of management studio with SQL server instance in the same word document.
+•	Upload the recorded video in YouTube as private video and post the link in the Jira task comment box.
+•	Mark it as Peer Review once committed to GitHub
