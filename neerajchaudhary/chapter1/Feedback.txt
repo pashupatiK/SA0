@@ -1,0 +1,59 @@
+-	Difference between basic and custom SQL server installation.
+Basic installation type installs the SQL Server database engine feature with default configurations whereas custom installation installs SQL Server installation wizard and gives the options to choose the features, configurations while doing the installation.
+o	=======>(Needs explanation) What are those basic features?  
+o	=======>(Needs explanation) Need to name some of those common custom features and explain what those features are for
+            explain these: database engine, integration services, analysis services 
+
+
+-	What is “zeroing out a new space” mean? What does Instant File Initialization (or INI) mean?
+When a transaction log is first created or file growth occurs, the portion of the drive must be stamped with a known starting value (the file system literally writes the binary value 0xC0 in every byte in that file segment). This is commonly called zeroing out because the binary value was 0x00 prior to SQL server 2016.
+Instant File Initialization or INI is a SQL Server setup option that keeps SQL server from writing Binary zeros to data files when a database is created, expanded or restored. By avoiding the writing of Binary zeros, there is lower performance impact when disk space is allocated for several databases operations.
+======> good detail answer for zeroing out but for interview purpose make anwer simpler so that even the HR person can understands it.
+
+
+-	Windows Authentication vs Mixed Mode Authentication.
+Windows Authentication mode disables the SQL authentication mode and permits windows authentication mode. On the other hand, Mixed Mode authentication allows both windows and SQL server authentication mode. This is because there is no way to disable the windows authentication mode.
+====> (addtional comments only) In work where people are working in sql server, they usually have windows domain account. That domain 
+      account is a trusted account across all resources (servers, network etc). So, for such environments, windows account is good 
+	enough to access Sql Server simply because the windows domain account connecting sql sever account is considered trusted. 
+	But, when a different account (like account from different domain but the same network) is not considered trustworthy. Hence, Sql Server
+	allows such user to access the instance via some other authentication type (that requires username and passowrd) also known as Sql Server Authentication account.
+	In Sql Server Security => Login folder, you can differentiate between  Windows vs Sql authentication account by the domain names. Windows account are always   <domain>\<account name>
+	where as sql server authentication has  <account name> only 	  
+
+-	What is “trusted connection = True” in connection string?
+Trusted connection = True means integrated security = SSPI. If this is not present in connection string then you need to specify userid and password in connection string as server = yourservername, database = userid = youruserid, password = password.
+
+-	What are NT accounts for SQl server and SQL server agents? What are minimum permissions for those two accounts?
+They are built in service accounts for sql server services. They are SQL Server main engine service and sql server agent service.
+	======> (Needs explanation) This needs more explaining. Some DBAs like to have a domain account as service account. Why do you think they want to override what Microsoft has already provided? Fill this one out more as you can be grilled on this question by the interviewer. 
+
+
+-	Database engine (what is it and what is it’s role?)
+A database engine or storage engine is underlying software component that a database management system uses to create, read, update and delete data from databases.
+=> (Additional comments only)
+=> 	How can you modify this statement that it remains in your long term memory. How can you simply so that even a chile can understand.
+=>	Maybe if I were you, I would just say,  Database engine is the main component which allows you to create, read, update and delete data from database. 
+=> I will have trouble remembering  "underlying" , "software component", "a database management system uses"    all these good phrases, but I want to remember and focus on what this actually does which is create, read, update and delete.
+=> I dont want to stumple on contructing a good sentence but I would rather say  the main point fluently.   
+
+-	Buffer manager (what is it and what is its role?)
+The subsystem responsible for allocation of buffer space is called buffer manager. If. User request particular block and the block is available in the buffer, the buffer manager provides the block address in the main memory, If the block is not available in the buffer, the buffer manager allocates the block in the buffer.
+=> same comment as above
+
+-	Query Optimizer (what is it and what is its role?)
+The SQL Server query optimizer is a cost-based optimizer. It analyzes a number of candidate execution plans for given query, estimates the cost of each of these plans and select the plans with the lower cost of the choices considered.
+=> same comment as above
+=> for this example,  "Query optimizer finds the plan with the lowest cost for a given query" is good enough for your initial answer. If the interviewer grills more then you provide more details. 
+=> Telling short answer fluently often times gives an impression that you have done these interviews enough, you are an experienced candidate and a confident one too.
+
+
+-	Query plan (what is it and what is its role?)
+A query plan is a set of steps that the database management system executes in order to execute the query. The reason we have query plan is that the sql you write may declare your intentions, but it doesn’t tell sql the exact logic flow to use. The query optimizer determines that and the result of that is the query plan. 
+=> same comment as above
+
+
+
+
+
+
