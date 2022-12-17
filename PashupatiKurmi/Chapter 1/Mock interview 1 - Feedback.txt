@@ -1,0 +1,84 @@
+
+   
+   
+   (Question) What version of sql server have you worked on ? 
+   --Your answer , sql server 2014 and sql server 2019, a bit on sql server 2022
+   --choice of words...instead of personal use, you should say, I have "working knowledge" . 
+   --Any topic you have heard of and atleast can talk something about it, you should always say, I have "working knowledge"
+		--Professionals have always something to say about the tools/versions related with their professional work. 
+		--for instance, about sql server 2016 and sql server 2017. You can always talk about the improved features that you liked to bridge 
+				the gap between 2014 and 2019. 
+   -- start documenting improved features (related with developers such as tsql improvements, performance improvements, new feature for developers etc)
+		from its predecessors. By the time your course is over, you should have the list ready  		
+   
+   
+   (Question) Any new features you like the most in sql server 2019, sql server 2022?
+   --see the comment above
+   
+   (Question) Can you walk me through how you install sql server? Do you know you can save your selection in a configuration file 
+   and use the file for all your future installations?
+   --explaining the process in concise is an art. You would have to identify which part to just mention and which part to go a bit in detail.
+   --for me, I would go in detail on feature selection, mixed mode authentication and service accounts, the other part I would just mention them.
+   --I should finish it in a minute. 
+   
+	   --Feature selection part: (My answer)If there would be a lot of data, then I would have database engine only and replication (if required) in one server, 
+			and have a separate installation for integration services and/or reporting serviecs in different servers.
+			else, I will have them all in one single server. (Notice, this is the depth I want to go into. Not too much)
+	   
+	   --For Authentication: (My answer) Also, there would normally be applications accessing sql server from different servers sitting in different domains. So, I would normally enable mixed mode authentication. 
+	   --for all internal users and appliations running under windows domain accounts, windows authentication would be set by default. 
+	   
+	   --For server accounts: (My answer) If integration services servers and reporting servers are installed separately, then I would think of using domain 
+	   accounts as service accounts else I would leave them as NT accounts (Notice I haven't gone deep here. Go deep if interviewer grills further)  
+	   
+	****The need to explain everything tells the interviewer that the candidate is a rookie. 
+	  
+   
+   (Question) What do you think Database engine does?
+   --try to identify the most important thing related with any question asked. 
+   --(My answer) It is a core component for insert, update, delete, retrieve data  
+   --Your answer should be concise, simple and should mention the most important thing related with the topic so that even a child should understand
+   
+   
+   
+   (Question) what port number Sql Server use by default?
+   --when learning big things, these small details are ignored, but these sort of questions are important. 
+   --This is figure out if the candidate has worked, they would know this simple basic but important question. 
+   --when you connect to instance with some other port, you would write the servername followed by a comma and the port number:
+			like (AZCIDC1OLTP,555)
+ 
+   
+   (Question) What are service accounts?  What accounts do sql server use by default? Do you recommend keeping the default service account or 
+   do you recommend changing it and Why?
+   --simple and concise answer required so that even a child can understand. 
+   
+   
+   (Question) What are logins vs users? 
+   --If you know them in layman's term, it is ok to explain it that way. The answer does not need to be technical always.
+   --(My answer): Login is like a gate code in a gated community and user is like the key to the house inside the gated community.
+                --The key to the house doesn't work for other house. Same way, user has access to the databases when they have given access to only.
+				
+   
+   (Question) What are extended events?
+   --It was a deliberate difficult question to test you how you handle them.
+   --I dont know is a good anwwer. You need to be identify the situation 
+   --and see if you should try a logical thoughtful guess or just say I dont know
+  
+   (Question) What is it at  work that was very challenging for you?
+   What is success for you?
+   Has there been any bad thing happened in your work environemnt and how you resolved it?
+   what is the worst thing happened to you at your workplace/life?
+   
+   --These are the thing you need to prepare ahead of time and should have really really good example. 
+   --This is the time when you were challenged and how you came out of it as a winner.
+   --This is the time when you can brag about the cool/difficult tool and technologies you had trouble learning but you did anyway 
+		and helped the team to deliver the task on time. 
+   --It is the opportnunity to show your:
+	--fast learning ability (new tool but learned quickly) and throw some cool features you learned 
+	--hard working nature (new tool, quickly learned and finished worked on time is an example of hard work)
+	--failed initially but came out at winner
+	--good individually as well as in a team.
+		--for team, you can make up as if the work wasn't yours originally but you stepped up because 
+		--if the work doesn't finish, your entire looks bad and you are part of that team. 
+		--So, you stepped up to help your team. (shows you are a team man)
+
