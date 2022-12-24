@@ -1,0 +1,5 @@
+Location of mdf files
+- C:\Program Files\Microsoft SQL Server\MSSQL 15.MSSQLSERVER\MSSQL\DATA
+
+Location of ndf files
+- C:\Program Files\Microsoft SQL Server\MSSQL 15.MSSQLSERVER\MSSQL\DATA
