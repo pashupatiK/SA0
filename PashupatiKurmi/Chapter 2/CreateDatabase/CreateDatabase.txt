@@ -1,0 +1,24 @@
+Create database (Name as StockAnalysis) 
+•	with GUI. 
+•	with default MDF and LDF names and location. 
+•	create new FILEGROUP other than Primary (like Secondary).
+		Screen uploaded on Git: FileGroupScreen1.PNG
+•	In a text file, post what is the location of the MDF and LDF files and name it as CreateDatabase.txt 
+		MDF: C:\Users\pashu\Music\MSSQL15.MSSQLSERVER2019\MSSQL\DATA
+		LDF: C:\Users\pashu\Music\MSSQL15.MSSQLSERVER2019\MSSQL\DATA
+•	Also, post the screenshot.jpg of Filegroup tab (Note, the difference won’t appear in Github desktop)
+•	Take the screenshot of database created (database.jpg) and upload them in github.
+		Screen uploaded on Git: CreateDB1Chap2Screen.PNG
+
+
+Create database (Name it as StockAnalysisTemp)
+•	with TSQL
+•	with different MDF and LDF names and location
+•	create new FILEGROUP other than Primary (like Secondary).
+		Screen uploaded on Git: FileGroupScreen1.PNG
+•	In the same text file, post what is the location of the MDF, LDF and NDF files 
+		MDF: C:\Users\pashu\Music\MSSQL15.MSSQLSERVER2019\MSSQL\DATA (forget to change)
+		LDF: C:\Users\pashu\Music\MSSQL15.MSSQLSERVER2019\MSSQL\DATA (forget to change)
+•	Also, upload the screenshot_temp.jpg of Filegroup tab in github
+•	Take the screenshot of database created (database_temp.jpg) and upload them in github
+		Screen uploaded on Git: CreateDB1Chap2Screen.PNG

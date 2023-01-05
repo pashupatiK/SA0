@@ -1,0 +1,54 @@
+Write 360 degree note on (template attached):
+•	Each System database, compare with each other 
+System Database:
+Master DB: 
+o	Records all the system-level information for an instance such as accounts, Logon, endpoints, linked server, and config settings.
+o	Stores info about all existing DB, locations of their data, initialization info, and transaction logs.
+o	To start SQL server instance, MSDB must be exist and readable.
+o	It can be restored from the backups or rebuild.
+o	User does not have control over the MSDB size.
+MSDB: 
+o	Is used by SQL Server Agent for scheduling alerts and jobs, and other features such as SSMS, Service broker, and DB amil.
+o	Uses simple recovery mode, can be set to full recovery model.
+o	Is highly sensitive.  
+
+Model DB:
+
+o	Is used as the templet of all databases created on that SQL server instance. 
+o	Any modification made to this DB such as DB size, collation, recovery model etc. will apply to any DB created afterward.
+o	Entire content of the Model DB and some settings copied to new DB in that instance.
+o	Whenever the SQL server starts, the Temp DB uses Model DB, so it must always exist.
+o	New created DB uses the same recovery mode as Model DB.
+
+Temp DB: 
+
+o	Is a global resource available to all users connected to that instance.
+o	 Holds global/local User objects, temp tables, indexes, temp procedures, table variables, cursors, and intermediate sets. 
+o	Holds Internal objects; intermediate results for spools, cursors, sorts, and temp large obj storage.
+o	Each internal obj uses a minimum of 9 pages.
+o	The size of Temp Db can affect performance.
+
+Resource DB:
+o	Is a read only Db that contains system obj that are included with SQL Server. 
+o	System objects are physically persisted in the Resources DB, but they logically appear in the sys schema of each DB. 
+
+•	compare each system database with user database.
+
+While system BD will maintain information about SLQ server system, the User DBs are for users to store data and work with it.
+
+•	File
+o	Every SQL server has at least data and log files.
+o	Data files contain data and objects such as tables, indexes, stored procedures, and views.
+o	Data files can be grouped in Filegroups.
+o	Log files contain info that requires to recover transactions in the DB.
+o	Primary: Contains startup info and pointers to other files.
+o	Secondary: User defined file. Used to store data in different storage.
+
+•	Filegroup
+o	Contains primary and secondary files that are not in other groups.
+o	Is used to group data files for administrative, allocation, and placement purposes.
+o	Any one file group can be set as default file group to hold objects. 
+
+•	Service Accounts
+o	Each service in the SQL server is a process that runs under the windows account. Service can be installed and configured in Configuration Manager. 
+
